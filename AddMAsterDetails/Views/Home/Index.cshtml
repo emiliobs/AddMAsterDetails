@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Master Details entry form</h2>
+
+<div class="container">
+    <div class="master">
+        <h2>Order</h2>
+        <table class="table table-responsive">
+            <tr>
+                <td>Order Número</td>
+                <td>
+                    <input type="text" name="orderNumber" class="form-control" value="" />
+                    <span class="error">Order no required</span>
+                </td>
+                <td>Order Date</td>
+                <td>
+                    <input type="text" name="orderNumber" class="form-control" value="" />
+                    <span class="error">Valid order required (ex: MM-dd-yyyy)</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td colspan="3">
+                    <textarea id="descrption" class="form-control"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="details">
+        <h2>Order items</h2>
+        <table class="table table-responsive">
+           <tr>
+               <td>Category</td>
+               <td>Product</td>
+               <td>Quantity</td>
+               <td>Rate</td>
+               <td>&nbsp;</td>
+           </tr>
+            <tr class="mycontainer" id="mainrow">
+                <td>
+                    <select id="productCategory" class="pc form-control" onchange="LoadProduct(this)">
+                       <option>Select.</option>                        
+                    </select>
+                    <span class="error">Select Category</span>
+                </td>
+                <td>
+                    <select id="Porduct" class="product form-control">
+                        <option>Select.</option>                        
+                    </select>
+                    <span class="error">Select product</span>
+                </td>
+                <td>
+                    <input type="text" name="quantity" class="quantity form-control" value="" />
+                    <span class="error">Valid Quantity Required.</span>
+                </td>
+                <td>
+                    <input type="text" id="rate" class="rate form-control" name="name" value="" />
+                    <span class="error">Valid Rate Required.</span>
+                </td>
+                <td>
+                    <input type="button" id="add"  value="Add" style="width:80px" class="tbn btn-success" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
